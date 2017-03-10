@@ -5,4 +5,4 @@ $date = Get-Date
 $n = $date.AddDays(-60)
 
 #Remember to define your search base for your domain.
-Get-ADComputer -Filter {LastLogonDate -le $n} -Properties * -SearchBase "ou=Users,dc=contoso,dc=com" | Remove-ADComputer -Confirm
+Get-ADComputer -Filter {LastLogonDate -le $n} -Properties * -SearchBase "ou=Computers,dc=contoso,dc=com" | Remove-ADComputer -Confirm
